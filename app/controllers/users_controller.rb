@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 	def my
-		@user = current_user		
+		@user = current_user
 	end
 
 	def update

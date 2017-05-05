@@ -1,6 +1,6 @@
 <h1> My profile </h>
 <br>
-<%= image_tag @user.avatar.url(:medium) %>
+<%= image_tag @user.avatar.url(:medium), id: 'user_ava' %>
 
 <%= form_for @user do |f| %>
   <div class="form-group">

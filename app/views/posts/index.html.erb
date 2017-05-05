@@ -1,20 +1,18 @@
 <h1>Listing posts</h1>
-<%= link_to 'New post', new_post_path %>
-
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-  </tr>
- 
+  <!--<%= link_to 'New post', new_post_path %>-->
   <% @posts.each do |post| %>
-    <tr>
-      <td><%= post.title %></td>
-      <td><%= post.text %></td>
-      <td><%= link_to 'Show', post_path(post) %>  |  </td> |
-      <td><%= link_to 'Edit', edit_post_path(post) %>  |  </td>
-      <td><%= link_to 'Delete', posts_path(@post), method: :delete %></td>
-    </tr>
+    <div class="post" style="padding: 20px; border: 2px solid #eee; margin-bottom: 10px; ">
+      <div class="Title" style="font-size: 2em; margin-top: 20px;
+          margin-bottom: 10px; border-bottom: 1px solid #eee;" >
+        <%= post.title %>
+      </div>
+      <div class="Text">
+        <%= post.text %>
+      </div>
+        <img src="<%= post.images.url(:thumb) %>" alt="Картинка поста" style="display: block; " class="img-circle">
+      <div class="show-more" style="float: right" >
+        <%= link_to  'Show more', post_path(post) %>
+      </div>
+    </div>
   <% end %>
 
-</table>
