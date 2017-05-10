@@ -1,4 +1,7 @@
-<%= image_tag @post.images.url(:medium), id: 'post_image' %>
+<br>
+<div style="max-width: 100%; overflow: hidden;">
+  <%= image_tag @post.pic.url, id: 'post_image'  %>
+</div>
     <h3>
       <%= @post.title %>
     </h3>

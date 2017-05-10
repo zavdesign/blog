@@ -1,7 +1,9 @@
 <h1> My profile </h>
+<br><br>
+<div class="img-circle">
+  <%= image_tag @user.avatar.url(:medium), id: 'user_ava' %>
+</div>
 <br>
-<%= image_tag @user.avatar.url(:medium), id: 'user_ava' %>
-
 <%= form_for @user do |f| %>
   <div class="form-group">
     <%= f.label :first_name %>

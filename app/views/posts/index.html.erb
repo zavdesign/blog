@@ -1,6 +1,7 @@
-<h1>Listing posts</h1>
+
   <!--<%= link_to 'New post', new_post_path %>-->
   <% @posts.each do |post| %>
+  <br>
     <div class="post" style="padding: 20px; border: 2px solid #eee; margin-bottom: 10px; ">
       <div class="Title" style="font-size: 2em; margin-top: 20px;
           margin-bottom: 10px; border-bottom: 1px solid #eee;" >
@@ -9,10 +10,14 @@
       <div class="Text">
         <%= post.text %>
       </div>
-        <img src="<%= post.images.url(:thumb) %>" alt="Картинка поста" style="display: block; " class="img-circle">
-      <div class="show-more" style="float: right" >
+       <div class="show-more" style="float: right" >
         <%= link_to  'Show more', post_path(post) %>
-      </div>
+      </div> <br>
+      
+      <br>
+        <img src="<%= post.pic.url %>" alt="Картинка поста" class="img-responsive">
+        <br>
+     
     </div>
   <% end %>
 
